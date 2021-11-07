@@ -13,11 +13,13 @@ const App = () => {
   const handleChange = (e) => {
       setName(e.target.value);
   }
+
   const handleSubmit = (e) => {
       e.preventDefault();
       addTask(name);
       setName("");
   }
+  
   const addTask = (name)=> {
     const newTask = { id: "todo-" + nanoid(), name: name };
     setTasks([...tasks, newTask]);
