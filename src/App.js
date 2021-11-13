@@ -14,13 +14,21 @@ const App = () => {
     setTasks([...tasks, newTask]);
   }
 
+  const removeTask = (name)=> {
+    const newTasks = tasks.filter(task => task.name !== name)
+    setTasks([...newTasks]);
+  }
+
   return (
     <>
       <h1>Todo list</h1>
       <ul>
         {taskList}
       </ul>
-      <Form propName={addTask}/>
+      <h2>What needs to be done?</h2>
+      <Form onSubmit={addTask}/>
+      <h2>What needs to be removed?</h2>
+      <Form onSubmit={removeTask}/>
     </>
   );
 }
