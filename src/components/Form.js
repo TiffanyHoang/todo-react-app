@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export const Form = (props) => {
+export const Form = ({propName}) => {
     const [name, setName] = useState('');
 
     const handleChange = (e) => {
@@ -9,7 +9,7 @@ export const Form = (props) => {
   
     const handleSubmit = (e) => {
         e.preventDefault();
-        props.propName(name);
+        propName(name);
         setName("");
     }
     
