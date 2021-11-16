@@ -43,9 +43,6 @@ export const Form = ({onSubmit}) => {
     )
 }
 
-
-
-
 export const FormRemove = ({onSubmit}) => {
     const [id, setId] = useState('');
 
